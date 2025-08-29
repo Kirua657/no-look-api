@@ -1,9 +1,30 @@
-venv/
+﻿# ---- Python ----
 __pycache__/
-*.pyc
-.env
+*.py[cod]
+*.pyo
+*.pyd
+*.pkl
+*.log
 *.sqlite3
-.DS_Store
-node_modules/
-dist/
 
+# Virtual envs
+.venv/
+venv/
+env/
+
+# Tooling
+.pytest_cache/
+.mypy_cache/
+ruff_cache/
+.ipynb_checkpoints/
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
+
+# Local runtime / secrets
+.env
+*.db
+nolook_dev.db
+openapi.json
