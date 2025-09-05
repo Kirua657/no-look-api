@@ -23,3 +23,5 @@ DATABASE_URL=sqlite:///C:/Users/Kirua/Documents/NoLook/nolook_dev.db
 ## 方針
 - 本文は保存しない（統計のみ保存）
 - 感情ラベルのキーは固定: ["楽しい","悲しい","怒り","不安","しんどい","中立"]
+
+Smoke test: 2025-09-05T20:17:27
