@@ -1,0 +1,8 @@
+@'
+text,expected
+今日は萎えたー,悲しい
+俺のミスじゃないのに責められてイライラする,怒り
+明日の大会が不安,不安
+ヤバいくらい眠い,しんどい
+まあいいや、別に,中立
+'@ | Set-Content -Encoding UTF8 data\devset.csv
