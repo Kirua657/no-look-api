@@ -377,9 +377,12 @@ def resolve_emotion(text: str, selected_emotion: Optional[str]):
     if norm:
         labels = _one_hot(norm)
         return norm, 1.0, labels
-    if MANUAL_ONLY:
+    # ← ここを変更
+    manual_only = os.getenv("NOLOOK_MANUAL_ONLY", "0") == "1" or MANUAL_ONLY
+    if manual_only:
         raise HTTPException(status_code=400, detail="selected_emotion を指定してください（例: 楽しい/悲しい/怒り/不安/しんどい/中立）")
     return classify_emotion(text)
+
 
 class Signals(BaseModel):
     topic_tags: List[str]
